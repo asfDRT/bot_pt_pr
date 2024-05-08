@@ -1,0 +1,297 @@
+2024-05-07 01:06:17,913 - INFO - Start polling
+2024-05-07 01:06:18,527 - INFO - Run polling for bot @ptdevopstest_bot id=7054813497 - 'ptdevopstest'
+2024-05-07 01:06:21,694 - INFO - Пользователь 437953795 запросил поиск email-адресов
+2024-05-07 01:06:22,412 - INFO - Update id=311010157 is handled. Duration 719 ms by bot id=7054813497
+2024-05-07 01:06:26,817 - INFO - Update id=311010158 is handled. Duration 390 ms by bot id=7054813497
+2024-05-07 01:06:29,760 - INFO - Добавление данных в email_table
+2024-05-07 01:06:29,760 - INFO - Update id=311010159 is not handled. Duration 0 ms by bot id=7054813497
+2024-05-07 01:06:29,760 - ERROR - Cause exception while process update id=311010159 by bot id=7054813497
+TypeError: 'int' object is not callable
+Traceback (most recent call last):
+  File "C:\Users\Vadim\PycharmProjects\bot_pt_pr\sql.py", line 46, in insert_email
+    await fetch_from_db("INSERT INTO email_table (email) VALUES ($1) ON CONFLICT DO NOTHING", email)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: fetch_from_db() takes 1 positional argument but 2 were given
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Vadim\PycharmProjects\bot_pt_pr\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Vadim\PycharmProjects\bot_pt_pr\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Vadim\PycharmProjects\bot_pt_pr\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Vadim\PycharmProjects\bot_pt_pr\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 49, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Vadim\PycharmProjects\bot_pt_pr\.venv\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Vadim\PycharmProjects\bot_pt_pr\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Vadim\PycharmProjects\bot_pt_pr\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Vadim\PycharmProjects\bot_pt_pr\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Vadim\PycharmProjects\bot_pt_pr\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 142, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Vadim\PycharmProjects\bot_pt_pr\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 137, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Vadim\PycharmProjects\bot_pt_pr\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 162, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Vadim\PycharmProjects\bot_pt_pr\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Vadim\PycharmProjects\bot_pt_pr\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Vadim\PycharmProjects\bot_pt_pr\main.py", line 66, in save_emails
+    await insert_email(email)
+  File "C:\Users\Vadim\PycharmProjects\bot_pt_pr\sql.py", line 48, in insert_email
+    logging.CRITICAL(f"Произошла ошибка при добавлении данных в email_table {e}")
+TypeError: 'int' object is not callable
+2024-05-07 01:08:36,178 - INFO - Polling stopped
+2024-05-07 01:08:36,429 - INFO - Polling stopped for bot @ptdevopstest_bot id=7054813497 - 'ptdevopstest'
+2024-05-07 01:08:37,764 - INFO - Start polling
+2024-05-07 01:08:38,836 - INFO - Run polling for bot @ptdevopstest_bot id=7054813497 - 'ptdevopstest'
+2024-05-07 01:08:40,813 - INFO - Пользователь 437953795 запросил поиск email-адресов
+2024-05-07 01:08:41,754 - INFO - Update id=311010160 is handled. Duration 953 ms by bot id=7054813497
+2024-05-07 01:08:44,941 - INFO - Update id=311010161 is handled. Duration 405 ms by bot id=7054813497
+2024-05-07 01:08:46,784 - INFO - Добавление данных в email_table
+2024-05-07 01:08:46,784 - INFO - Подключение к БД
+2024-05-07 01:08:47,020 - INFO - Update id=311010162 is handled. Duration 233 ms by bot id=7054813497
+2024-05-07 01:08:51,805 - INFO - Пользователь 437953795 запросил данные о email
+2024-05-07 01:08:51,805 - INFO - Запросы данных о email
+2024-05-07 01:08:51,805 - INFO - Подключение к БД
+2024-05-07 01:08:52,058 - INFO - Update id=311010163 is handled. Duration 250 ms by bot id=7054813497
+2024-05-07 01:08:58,507 - INFO - Пользователь 437953795 запросил поиск email-адресов
+2024-05-07 01:08:58,759 - INFO - Update id=311010164 is handled. Duration 250 ms by bot id=7054813497
+2024-05-07 01:09:08,774 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2024-05-07 01:09:08,774 - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7054813497)
+2024-05-07 01:09:10,026 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2024-05-07 01:09:10,026 - WARNING - Sleep for 1.382669 seconds and try again... (tryings = 1, bot id = 7054813497)
+2024-05-07 01:09:18,727 - INFO - Connection established (tryings = 2, bot id = 7054813497)
+2024-05-07 01:09:19,484 - INFO - Update id=311010165 is handled. Duration 750 ms by bot id=7054813497
+2024-05-07 01:09:22,726 - INFO - Добавление данных в email_table
+2024-05-07 01:09:22,726 - INFO - Подключение к БД
+2024-05-07 01:09:22,740 - INFO - Добавление данных в email_table
+2024-05-07 01:09:22,740 - INFO - Подключение к БД
+2024-05-07 01:09:22,753 - INFO - Добавление данных в email_table
+2024-05-07 01:09:22,753 - INFO - Подключение к БД
+2024-05-07 01:09:23,240 - INFO - Update id=311010166 is handled. Duration 516 ms by bot id=7054813497
+2024-05-07 01:09:30,268 - INFO - Пользователь 437953795 запросил данные о email
+2024-05-07 01:09:30,268 - INFO - Запросы данных о email
+2024-05-07 01:09:30,268 - INFO - Подключение к БД
+2024-05-07 01:09:30,477 - INFO - Update id=311010167 is handled. Duration 203 ms by bot id=7054813497
+2024-05-07 01:11:04,072 - INFO - Пользователь 437953795 запросил поиск email-адресов
+2024-05-07 01:11:05,368 - INFO - Update id=311010168 is handled. Duration 1297 ms by bot id=7054813497
+2024-05-07 01:11:07,184 - INFO - Update id=311010169 is handled. Duration 359 ms by bot id=7054813497
+2024-05-07 01:11:11,891 - INFO - Пользователь 437953795 запросил поиск номеров телефонов
+2024-05-07 01:11:12,143 - INFO - Update id=311010170 is handled. Duration 265 ms by bot id=7054813497
+2024-05-07 01:11:14,076 - INFO - Update id=311010171 is handled. Duration 250 ms by bot id=7054813497
+2024-05-07 01:11:16,304 - INFO - Пользователь 437953795 запросил поиск email-адресов
+2024-05-07 01:11:16,514 - INFO - Update id=311010172 is handled. Duration 203 ms by bot id=7054813497
+2024-05-07 01:11:18,677 - INFO - Update id=311010173 is handled. Duration 359 ms by bot id=7054813497
+2024-05-07 01:11:20,403 - INFO - Пользователь 437953795 запросил поиск номеров телефонов
+2024-05-07 01:11:20,653 - INFO - Update id=311010174 is handled. Duration 250 ms by bot id=7054813497
+2024-05-07 01:11:22,039 - INFO - Update id=311010175 is handled. Duration 250 ms by bot id=7054813497
+2024-05-07 01:14:15,770 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2024-05-07 01:14:15,770 - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7054813497)
+2024-05-07 01:14:27,986 - INFO - Connection established (tryings = 1, bot id = 7054813497)
+2024-05-07 01:14:54,421 - INFO - Polling stopped
+2024-05-07 01:14:54,671 - INFO - Polling stopped for bot @ptdevopstest_bot id=7054813497 - 'ptdevopstest'
+2024-05-07 01:14:56,034 - INFO - Start polling
+2024-05-07 01:14:56,640 - INFO - Run polling for bot @ptdevopstest_bot id=7054813497 - 'ptdevopstest'
+2024-05-07 01:15:02,359 - INFO - Пользователь 437953795 запросил поиск номеров телефонов
+2024-05-07 01:15:03,119 - INFO - Update id=311010176 is handled. Duration 766 ms by bot id=7054813497
+2024-05-07 01:15:13,933 - INFO - Update id=311010177 is handled. Duration 250 ms by bot id=7054813497
+2024-05-07 01:15:17,027 - INFO - Добавление данных в phone_number
+2024-05-07 01:15:17,027 - INFO - Подключение к БД
+2024-05-07 01:15:17,277 - INFO - Update id=311010178 is handled. Duration 250 ms by bot id=7054813497
+2024-05-07 01:15:24,924 - INFO - Пользователь 437953795 запросил данные о phone
+2024-05-07 01:15:24,924 - INFO - Запросы данных о phone
+2024-05-07 01:15:24,924 - INFO - Подключение к БД
+2024-05-07 01:15:25,174 - INFO - Update id=311010179 is handled. Duration 250 ms by bot id=7054813497
+2024-05-07 01:19:10,731 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2024-05-07 01:19:10,731 - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7054813497)
+2024-05-07 01:19:22,716 - INFO - Connection established (tryings = 1, bot id = 7054813497)
+2024-05-07 01:19:37,538 - INFO - Polling stopped
+2024-05-07 01:19:37,789 - INFO - Polling stopped for bot @ptdevopstest_bot id=7054813497 - 'ptdevopstest'
+2024-05-07 01:19:39,143 - INFO - Start polling
+2024-05-07 01:19:40,070 - INFO - Run polling for bot @ptdevopstest_bot id=7054813497 - 'ptdevopstest'
+2024-05-07 01:19:40,332 - INFO - Пользователь 437953795 запросил данные о phone
+2024-05-07 01:19:40,332 - INFO - Запросы данных о phone
+2024-05-07 01:19:40,332 - INFO - Подключение к БД
+2024-05-07 01:19:41,318 - INFO - Update id=311010180 is handled. Duration 983 ms by bot id=7054813497
+2024-05-07 01:19:43,056 - INFO - Пользователь 437953795 запросил поиск номеров телефонов
+2024-05-07 01:19:43,413 - INFO - Update id=311010181 is handled. Duration 360 ms by bot id=7054813497
+2024-05-07 01:19:49,864 - INFO - Update id=311010182 is handled. Duration 250 ms by bot id=7054813497
+2024-05-07 01:19:51,682 - INFO - Добавление данных в phone_number
+2024-05-07 01:19:51,682 - INFO - Подключение к БД
+2024-05-07 01:19:51,932 - INFO - Update id=311010183 is handled. Duration 250 ms by bot id=7054813497
+2024-05-07 01:19:56,712 - INFO - Пользователь 437953795 запросил данные о phone
+2024-05-07 01:19:56,712 - INFO - Запросы данных о phone
+2024-05-07 01:19:56,712 - INFO - Подключение к БД
+2024-05-07 01:19:56,962 - INFO - Update id=311010184 is handled. Duration 250 ms by bot id=7054813497
+2024-05-07 01:24:13,284 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2024-05-07 01:24:13,284 - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7054813497)
+2024-05-07 01:24:25,194 - INFO - Connection established (tryings = 1, bot id = 7054813497)
+2024-05-07 01:28:37,860 - INFO - Update id=311010185 is not handled. Duration 16 ms by bot id=7054813497
+2024-05-07 01:28:41,704 - INFO - Пользователь 437953795 ввел команду help
+2024-05-07 01:28:42,944 - INFO - Update id=311010186 is handled. Duration 1250 ms by bot id=7054813497
+2024-05-07 01:28:44,993 - INFO - Пользователь 437953795 запросил поиск email-адресов
+2024-05-07 01:28:45,244 - INFO - Update id=311010187 is handled. Duration 250 ms by bot id=7054813497
+2024-05-07 01:29:14,566 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2024-05-07 01:29:14,566 - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7054813497)
+2024-05-07 01:29:15,274 - INFO - Update id=311010188 is handled. Duration 811 ms by bot id=7054813497
+2024-05-07 01:29:17,266 - INFO - Connection established (tryings = 1, bot id = 7054813497)
+2024-05-07 01:29:17,266 - INFO - Добавление данных в email_table
+2024-05-07 01:29:17,266 - INFO - Подключение к БД
+2024-05-07 01:29:17,298 - INFO - Добавление данных в email_table
+2024-05-07 01:29:17,298 - INFO - Подключение к БД
+2024-05-07 01:29:18,215 - INFO - Пользователь 437953795 записал данные в таблицу email_table
+2024-05-07 01:29:18,215 - INFO - Update id=311010189 is handled. Duration 938 ms by bot id=7054813497
+2024-05-07 01:29:21,026 - INFO - Пользователь 437953795 запросил данные о email
+2024-05-07 01:29:21,027 - INFO - Запросы данных о email
+2024-05-07 01:29:21,027 - INFO - Подключение к БД
+2024-05-07 01:29:21,278 - INFO - Update id=311010190 is handled. Duration 250 ms by bot id=7054813497
+2024-05-07 01:29:44,717 - INFO - Пользователь 437953795 запросил поиск email-адресов
+2024-05-07 01:29:45,608 - INFO - Update id=311010191 is handled. Duration 889 ms by bot id=7054813497
+2024-05-07 01:29:53,744 - INFO - Update id=311010192 is handled. Duration 250 ms by bot id=7054813497
+2024-05-07 01:29:55,962 - INFO - Update id=311010193 is handled. Duration 250 ms by bot id=7054813497
+2024-05-07 01:30:18,618 - INFO - Пользователь 437953795 запросил поиск email-адресов
+2024-05-07 01:30:19,234 - INFO - Update id=311010194 is handled. Duration 608 ms by bot id=7054813497
+2024-05-07 01:30:26,370 - INFO - Update id=311010195 is handled. Duration 250 ms by bot id=7054813497
+2024-05-07 01:30:29,420 - INFO - Update id=311010196 is handled. Duration 250 ms by bot id=7054813497
+2024-05-07 01:30:32,384 - INFO - Пользователь 437953795 запросил поиск email-адресов
+2024-05-07 01:30:32,634 - INFO - Update id=311010197 is handled. Duration 250 ms by bot id=7054813497
+2024-05-07 01:30:36,867 - INFO - Update id=311010198 is handled. Duration 250 ms by bot id=7054813497
+2024-05-07 01:30:39,778 - INFO - Добавление данных в email_table
+2024-05-07 01:30:39,778 - INFO - Подключение к БД
+2024-05-07 01:30:40,029 - INFO - Пользователь 437953795 записал данные в таблицу email_table
+2024-05-07 01:30:40,029 - INFO - Update id=311010199 is handled. Duration 250 ms by bot id=7054813497
+2024-05-07 01:30:53,993 - INFO - Пользователь 437953795 запросил данные о email
+2024-05-07 01:30:53,993 - INFO - Запросы данных о email
+2024-05-07 01:30:53,993 - INFO - Подключение к БД
+2024-05-07 01:30:54,288 - INFO - Update id=311010200 is handled. Duration 296 ms by bot id=7054813497
+2024-05-07 01:31:36,829 - INFO - Пользователь 437953795 ввел команду help
+2024-05-07 01:31:38,316 - INFO - Update id=311010201 is handled. Duration 1500 ms by bot id=7054813497
+2024-05-07 01:31:40,053 - INFO - Пользователь 437953795 запросил поиск номеров телефонов
+2024-05-07 01:31:40,305 - INFO - Update id=311010202 is handled. Duration 250 ms by bot id=7054813497
+2024-05-07 01:32:06,728 - INFO - Update id=311010203 is handled. Duration 2328 ms by bot id=7054813497
+2024-05-07 01:32:09,894 - INFO - Добавление данных в phone_number
+2024-05-07 01:32:09,894 - INFO - Подключение к БД
+2024-05-07 01:32:10,146 - INFO - Update id=311010204 is handled. Duration 250 ms by bot id=7054813497
+2024-05-07 01:32:13,888 - INFO - Пользователь 437953795 запросил данные о phone
+2024-05-07 01:32:13,888 - INFO - Запросы данных о phone
+2024-05-07 01:32:13,888 - INFO - Подключение к БД
+2024-05-07 01:32:14,138 - INFO - Update id=311010205 is handled. Duration 250 ms by bot id=7054813497
+2024-05-07 01:32:23,802 - INFO - Пользователь 437953795 запросил поиск номеров телефонов
+2024-05-07 01:32:24,052 - INFO - Update id=311010206 is handled. Duration 250 ms by bot id=7054813497
+2024-05-07 01:32:55,294 - INFO - Update id=311010207 is handled. Duration 1375 ms by bot id=7054813497
+2024-05-07 01:33:00,307 - INFO - Добавление данных в phone_number
+2024-05-07 01:33:00,307 - INFO - Подключение к БД
+2024-05-07 01:33:00,323 - INFO - Добавление данных в phone_number
+2024-05-07 01:33:00,323 - INFO - Подключение к БД
+2024-05-07 01:33:00,335 - INFO - Добавление данных в phone_number
+2024-05-07 01:33:00,335 - INFO - Подключение к БД
+2024-05-07 01:33:00,558 - INFO - Update id=311010208 is handled. Duration 250 ms by bot id=7054813497
+2024-05-07 01:33:03,668 - INFO - Пользователь 437953795 запросил данные о phone
+2024-05-07 01:33:03,668 - INFO - Запросы данных о phone
+2024-05-07 01:33:03,668 - INFO - Подключение к БД
+2024-05-07 01:33:03,919 - INFO - Update id=311010209 is handled. Duration 250 ms by bot id=7054813497
+2024-05-07 01:34:15,030 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2024-05-07 01:34:15,030 - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7054813497)
+2024-05-07 01:34:26,648 - INFO - Connection established (tryings = 1, bot id = 7054813497)
+2024-05-07 01:35:03,613 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientOSError: [WinError 1236] Подключение к сети было разорвано локальной системой
+2024-05-07 01:35:03,614 - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7054813497)
+2024-05-07 01:35:14,792 - INFO - Connection established (tryings = 1, bot id = 7054813497)
+2024-05-07 01:38:05,269 - INFO - Polling stopped
+2024-05-07 01:38:05,519 - INFO - Polling stopped for bot @ptdevopstest_bot id=7054813497 - 'ptdevopstest'
+2024-05-08 15:29:57,106 - INFO - Start polling
+2024-05-08 15:29:58,121 - INFO - Run polling for bot @ptdevopstest_bot id=7054813497 - 'ptdevopstest'
+2024-05-08 15:29:58,358 - INFO - Пользователь 437953795 запросил данные о phone
+2024-05-08 15:29:58,358 - INFO - Запросы данных о phone
+2024-05-08 15:29:58,358 - INFO - Подключение к БД
+2024-05-08 15:29:58,359 - INFO - Пользователь 437953795 запросил данные о phone
+2024-05-08 15:29:58,359 - INFO - Запросы данных о phone
+2024-05-08 15:29:58,359 - INFO - Подключение к БД
+2024-05-08 15:29:59,455 - INFO - Update id=311010210 is handled. Duration 1108 ms by bot id=7054813497
+2024-05-08 15:29:59,542 - INFO - Update id=311010211 is handled. Duration 1186 ms by bot id=7054813497
+2024-05-08 15:30:07,770 - INFO - Пользователь 437953795 ввел команду help
+2024-05-08 15:30:08,101 - INFO - Update id=311010212 is handled. Duration 328 ms by bot id=7054813497
+2024-05-08 15:30:09,586 - INFO - Пользователь 437953795 запросил информацию о процессах
+2024-05-08 15:30:09,594 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2024-05-08 15:30:09,727 - INFO - Authentication (password) successful!
+2024-05-08 15:30:10,621 - INFO - Update id=311010213 is handled. Duration 1030 ms by bot id=7054813497
+2024-05-08 15:30:15,919 - INFO - Пользователь 437953795 ввел команду help
+2024-05-08 15:30:16,373 - INFO - Update id=311010214 is handled. Duration 452 ms by bot id=7054813497
+2024-05-08 15:30:17,660 - INFO - Пользователь 437953795 запросил информацию об установленных пакетах
+2024-05-08 15:30:18,016 - INFO - Update id=311010215 is handled. Duration 344 ms by bot id=7054813497
+2024-05-08 15:30:21,294 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2024-05-08 15:30:21,395 - INFO - Authentication (password) successful!
+2024-05-08 15:30:21,950 - INFO - Update id=311010216 is handled. Duration 655 ms by bot id=7054813497
+2024-05-08 15:30:24,909 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2024-05-08 15:30:25,010 - INFO - Authentication (password) successful!
+2024-05-08 15:30:25,360 - INFO - Update id=311010217 is handled. Duration 453 ms by bot id=7054813497
+2024-05-08 15:30:28,633 - INFO - Пользователь 437953795 ввел команду help
+2024-05-08 15:30:28,969 - INFO - Update id=311010218 is handled. Duration 327 ms by bot id=7054813497
+2024-05-08 15:30:35,619 - INFO - Пользователь 437953795 запросил данные о email
+2024-05-08 15:30:35,619 - INFO - Запросы данных о email
+2024-05-08 15:30:35,619 - INFO - Подключение к БД
+2024-05-08 15:30:35,982 - INFO - Update id=311010219 is handled. Duration 360 ms by bot id=7054813497
+2024-05-08 15:30:41,862 - INFO - Пользователь 437953795 запросил логи репликации
+2024-05-08 15:30:41,862 - CRITICAL - Ошибка выполнения команды: [WinError 10049] Требуемый адрес для своего контекста неверен
+2024-05-08 15:30:42,086 - INFO - Update id=311010220 is handled. Duration 233 ms by bot id=7054813497
+2024-05-08 15:30:45,912 - INFO - Пользователь 437953795 запросил логи репликации
+2024-05-08 15:30:45,912 - CRITICAL - Ошибка выполнения команды: [WinError 10049] Требуемый адрес для своего контекста неверен
+2024-05-08 15:30:46,137 - INFO - Update id=311010221 is handled. Duration 219 ms by bot id=7054813497
+2024-05-08 15:32:45,351 - INFO - Пользователь 437953795 запросил логи репликации
+2024-05-08 15:32:45,351 - CRITICAL - Ошибка выполнения команды: [WinError 10049] Требуемый адрес для своего контекста неверен
+2024-05-08 15:32:46,287 - INFO - Update id=311010222 is handled. Duration 936 ms by bot id=7054813497
+2024-05-08 15:33:19,262 - INFO - Пользователь 437953795 запросил данные о email
+2024-05-08 15:33:19,262 - INFO - Запросы данных о email
+2024-05-08 15:33:19,262 - INFO - Подключение к БД
+2024-05-08 15:33:20,120 - INFO - Update id=311010223 is handled. Duration 858 ms by bot id=7054813497
+2024-05-08 15:33:31,575 - INFO - Polling stopped
+2024-05-08 15:33:31,816 - INFO - Polling stopped for bot @ptdevopstest_bot id=7054813497 - 'ptdevopstest'
+2024-05-08 15:33:33,243 - INFO - Start polling
+2024-05-08 15:33:33,992 - INFO - Run polling for bot @ptdevopstest_bot id=7054813497 - 'ptdevopstest'
+2024-05-08 15:33:34,438 - INFO - Пользователь 437953795 запросил данные о email
+2024-05-08 15:33:34,438 - INFO - Запросы данных о email
+2024-05-08 15:33:34,438 - INFO - Подключение к БД
+2024-05-08 15:33:35,303 - INFO - Update id=311010224 is handled. Duration 875 ms by bot id=7054813497
+2024-05-08 15:33:36,746 - INFO - Пользователь 437953795 запросил логи репликации
+2024-05-08 15:33:36,746 - CRITICAL - Ошибка выполнения команды: [WinError 10049] Требуемый адрес для своего контекста неверен
+2024-05-08 15:33:37,102 - INFO - Update id=311010225 is handled. Duration 360 ms by bot id=7054813497
+2024-05-08 15:34:17,603 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2024-05-08 15:34:17,604 - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7054813497)
+2024-05-08 15:34:29,185 - INFO - Connection established (tryings = 1, bot id = 7054813497)
+2024-05-08 15:34:36,214 - INFO - Polling stopped
+2024-05-08 15:34:36,465 - INFO - Polling stopped for bot @ptdevopstest_bot id=7054813497 - 'ptdevopstest'
+2024-05-08 15:34:37,888 - INFO - Start polling
+2024-05-08 15:34:38,498 - INFO - Run polling for bot @ptdevopstest_bot id=7054813497 - 'ptdevopstest'
+2024-05-08 15:34:40,325 - INFO - Пользователь 437953795 запросил логи репликации
+2024-05-08 15:34:40,340 - INFO - Connected (version 2.0, client OpenSSH_9.2p1)
+2024-05-08 15:34:40,354 - CRITICAL - Ошибка выполнения команды: No authentication methods available
+2024-05-08 15:34:40,967 - INFO - Update id=311010226 is handled. Duration 640 ms by bot id=7054813497
+2024-05-08 15:34:53,893 - INFO - Polling stopped
+2024-05-08 15:34:54,158 - INFO - Polling stopped for bot @ptdevopstest_bot id=7054813497 - 'ptdevopstest'
+2024-05-08 15:34:55,582 - INFO - Start polling
+2024-05-08 15:34:56,193 - INFO - Run polling for bot @ptdevopstest_bot id=7054813497 - 'ptdevopstest'
+2024-05-08 15:34:56,637 - INFO - Пользователь 437953795 запросил логи репликации
+2024-05-08 15:34:56,644 - INFO - Connected (version 2.0, client OpenSSH_9.2p1)
+2024-05-08 15:34:56,755 - INFO - Authentication (password) successful!
+2024-05-08 15:34:57,995 - INFO - Update id=311010227 is handled. Duration 1358 ms by bot id=7054813497
+2024-05-08 15:35:15,161 - INFO - Polling stopped
+2024-05-08 15:35:15,418 - INFO - Polling stopped for bot @ptdevopstest_bot id=7054813497 - 'ptdevopstest'
